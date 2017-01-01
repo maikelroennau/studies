@@ -1,0 +1,17 @@
+https://www.learnopencv.com/
+http://technobium.com/object-detection-with-opencv/
+https://www.learnopencv.com/image-recognition-and-object-detection-part1/
+http://note.sonots.com/SciSoftware/haartraining.html
+http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html
+http://www.trevorsherrard.com/Haar_training.html
+http://opencvuser.blogspot.com.br/2011/08/creating-haar-cascade-classifier-aka.html
+http://stackoverflow.com/questions/246215/how-can-i-list-files-with-their-absolute-path-in-linux
+https://www.vision.caltech.edu/Image_Datasets/Caltech101/
+http://host.robots.ox.ac.uk/pascal/VOC/voc2008/
+http://opencv.org/platforms/opencl.html
+http://amd-dev.wpengine.netdna-cdn.com/wordpress/media/2013/07/opencv-cl_instructions-246.pdf
+http://amritamaz.net/blog/opencv-config
+https://github.com/openalpr/openalpr/issues/2
+https://www.eriksmistad.no/getting-started-with-opencl-and-gpu-computing/
+http://www2.ati.com/relnotes/amd-catalyst-graphics-driver-installer-notes-for-linux-operating-systems.pdf
+http://blog.mldb.ai/blog/posts/2016/10/deepteach/
