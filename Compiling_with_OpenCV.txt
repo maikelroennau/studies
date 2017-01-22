@@ -1,1 +1,1 @@
-g++ -o out facedetect.cpp `pkg-config --cflags --libs opencv`
+`pkg-config --cflags --libs opencv`
