@@ -2,7 +2,7 @@ import cv2
 
 cap = cv2.VideoCapture(0)
 
-faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default_GPU.xml")
+faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 def detect(image):
     faces = faceCascade.detectMultiScale(
@@ -10,7 +10,6 @@ def detect(image):
         scaleFactor=1.1,
         minNeighbors=5,
         minSize=(30, 30),
-        flags = cv2.cv.CV_HAAR_SCALE_IMAGE
     )
 
     return faces
