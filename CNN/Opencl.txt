@@ -1,0 +1,5 @@
+Set-up opencl
+
+sudo apt-get install opencl-headers
+sudo apt-get install python-opencl
+sudo apt-get install python3-opencl
