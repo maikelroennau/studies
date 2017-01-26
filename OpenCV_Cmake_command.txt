@@ -25,7 +25,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_E
 sudo apt-get install build-essential
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
-sudo apt-get install libgtkglext1 libgtkglext1-dev
+sudo apt-get install libgtkglext1 libgtkglext1-dev python-opencv
 
 git clone https://github.com/Itseez/opencv.git
 git clone https://github.com/Itseez/opencv_contrib.git
@@ -40,3 +40,4 @@ cd build
 # cmake command
 make -j4
 sudo make install
+pkg-config --modversion opencv
