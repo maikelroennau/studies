@@ -1,13 +1,19 @@
 import cv2
-import numpy
+import numpy as np
+import os
 
-i = 0
+for filename in os.listdir("."):
+    if not filename.startswith("resizer"):
+        image = cv2.imread(filename)
 
-for i in range(0):
-    image = cv2.imread(str(i) + ".jpg")
+        #height, width, channels = image.shape
+        
+        # height += h
+        # width += w
+        # i += 1
 
-    height, width, channels = image.shape
+	#image = cv2.resize(image, (70, int((float(height) / float(width)) * 80)))
 
-    image = cv2.resize(image, (70, int((float(height) / float(width)) * 80)))
+        image = cv2.resize(image, (1134, 1536))
 
-    cv2.imwrite(str(i) + ".jpg", image)
+        cv2.imwrite(filename, image)
