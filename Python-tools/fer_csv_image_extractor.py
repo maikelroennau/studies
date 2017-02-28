@@ -8,7 +8,7 @@ filename = open(sys.argv[1], 'rb')
 
 file = csv.reader(filename)
 
-i = 0
+i = 1
 
 for row in file:
     if row[0] == 'emotion':
@@ -16,14 +16,7 @@ for row in file:
 
     image = np.fromstring(row[1], dtype=int, sep=' ').reshape(48, 48)
 
-    location = ''
-    emotion = 0
-
-    if row[2] == 'Training':
-        location = 'training/'
-    else:
-        location = 'test/'
-
+    location = row[2] + "/"
     emotion = str(row[0]) + "/"
 
     cv2.imwrite(location + emotion + str(i) + ".jpg", image)
