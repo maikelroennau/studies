@@ -2,18 +2,11 @@ import cv2
 import numpy as np
 import os
 
-for filename in os.listdir("."):
-    if not filename.startswith("resizer"):
-        image = cv2.imread(filename)
 
-        #height, width, channels = image.shape
-        
-        # height += h
-        # width += w
-        # i += 1
-
-	#image = cv2.resize(image, (70, int((float(height) / float(width)) * 80)))
-
-        image = cv2.resize(image, (1134, 1536))
-
-        cv2.imwrite(filename, image)
+for directory in os.listdir("."):
+	if directory[-3:] != ".py":
+		print "Processing " + directory
+		for filename in os.listdir(directory):
+			image = cv2.imread(os.path.join(directory, filename))
+			image = cv2.resize(image, (128, 98))
+			cv2.imwrite(os.path.join(directory, filename), image)
