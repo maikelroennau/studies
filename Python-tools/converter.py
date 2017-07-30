@@ -1,8 +1,7 @@
 import os
 
-i = 0
-for filename in os.listdir("."):
-    if not os.path.splitext(filename)[1] == ".py" and not os.path.splitext(filename)[1] == ".jpg": 
-        os.system("convert " + filename + " " + os.path.splitext(filename)[0] + ".jpg")
-        os.system("rm " + filename)
-        i += 1
+for directory in os.listdir('.'):
+    if directory[-3:] != '.py':
+        for image in os.listdir(directory):
+            os.system('convert {} {}'.format(os.path.join(directory, image), os.path.join(directory, os.path.splitext(image)[0] + '.jpg')))
+            os.system('rm {}'.format(os.path.join(directory, image)))
