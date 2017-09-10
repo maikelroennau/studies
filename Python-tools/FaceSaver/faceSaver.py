@@ -5,7 +5,7 @@ import cv2
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 for directory in os.listdir("."):
-    if directory[-3:] != ".py" and directory[-4:] != '.xml':
+    if directory[-3:] != ".py" and directory[-4:] != ".xml":
 	print 'Processing {}'.format(directory)
         images = os.listdir(directory)
 
@@ -22,4 +22,6 @@ for directory in os.listdir("."):
             for (x, y, w, h) in faces:
                 face = image[y: y + h, x: x + w]
                 cv2.imwrite(os.path.join(directory, img), face)
-                # cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
+                break
+            else:
+                os.remove(os.path.join(directory, img))
