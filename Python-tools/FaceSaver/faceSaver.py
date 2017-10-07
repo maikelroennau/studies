@@ -13,9 +13,9 @@ for directory in os.listdir("."):
             image = cv2.imread(os.path.join(directory, img))
             faces = faceCascade.detectMultiScale(
                 image,
-                scaleFactor=1.5,
+                scaleFactor=1.2,
                 minNeighbors=5,
-                minSize=(30, 30),
+                minSize=(16, 16),
                 flags = 0
             )
 
