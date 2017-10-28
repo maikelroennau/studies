@@ -1,6 +1,8 @@
 import os
+from tflearn.data_utils import shuffle
 
-images = 600
+
+images = 400
 destine = '../Moved'
 
 for dir in os.listdir('.'):
@@ -11,8 +13,11 @@ for dir in os.listdir('.'):
         if not os.path.isdir(os.path.join(destine, dir)):
             os.makedirs(os.path.join(destine, dir))
 
-        for i, image in enumerate(os.listdir(dir)):
-            os.system('mv {} {}'.format(os.path.join(dir, image), os.path.join(destine, dir)))
+        if len(os.listdir(dir)) - images < 0:
+            print 'Not enough images for this class'
+        else:
+            files = os.listdir(dir)
+            shuffle(files)
 
-            if i + 1 == images:
-                break
+            for i in range(len(files) - images):
+                os.system('mv {} {}'.format(os.path.join(dir, files[i]), os.path.join(destine, dir)))
